@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker</title>
+
+    <!-- added daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="w-[80%] mx-auto space-y-10">
+
+    <header class="space-y-5 mt-10">
+        <h1 class="text-2xl font-bold md:text-3xl md:font-bold">Job Application Tracker</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-base-200 p-5 rounded-2xl">
+                <p>Total</p>
+                <p id="totalCount" class="font-bold">0</p>
+            </div>
+            <div class="bg-base-200 p-5 rounded-2xl">
+                <p>INTERVIEW</p>
+                <p id="interviewCount" class="text-green-500 font-bold">0</p>
+            </div>
+            <div class="bg-base-200 p-5 rounded-2xl">
+                <p>REJECTED</p>
+                <p id="rejectedCount" class="text-red-500 font-bold">0</p>
+            </div>
+        </div>
+    </header>
+
+    <hr class="text-gray-300">
+
+    <main class="">
+        <div class="flex justify-between">
+            <h2 class="text-xl font-bold">Available Jobs</h2>
+            <p class="text-gray-500"></p>
+        </div>
+        <div class="mt-5">
+            <button id="all-filter-btn" class="btn btn-primary text-white px-8 py-1 mr-3 rounded-lg">All</button>
+            <button id="interview-filter-btn" class="btn btn-primary btn-soft px-8 py-1 mr-3 rounded-lg">INTERVIEW</button>
+            <button id="rejected-filter-btn" class="btn btn-primary btn-soft px-8 py-1 rounded-lg">REJECTED</button>
+        </div>
+
+        <section id="all-cards" class="mt-10 space-y-5">
+            <div class="card bg-base-200 p-6 rounded-2xl grid grid-cols-2">
+                <div class="left space-y-4">
+                    <h2 class="text-xl font-bold">Mobile First Corp</h2>
+                    <p class="text-gray-500">React Native Developer</p>
+                    <p class="text-gray-500">Remote
+                        •
+                        Full-time
+                        •
+                        $130,000 - $175,000</p>
+                    <p class="bg-blue-100 px-6 py-2 w-fit rounded-lg">NOT APPLIED</p>
+                    <p class="text-gray-500">Build cross-platform mobile applications using React Native. Work on
+                        products used by millions of users worldwide.</p>
+                    <div class="">
+                        <button class="btn btn-success btn-soft border-2 border-green-300 mr-3">INTERVIEW</button>
+                        <button class="btn btn-error btn-soft border-2 border-red-300">REJECTED</button>
+                    </div>
+                </div>
+
+                <div class="right flex ml-auto">
+                    <button class="btn btn-soft rounded-full btn-error p-3 border border-red-300"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
